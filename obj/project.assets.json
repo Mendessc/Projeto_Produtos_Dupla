@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\lucas\\.nuget\\packages\\": {}
+    "C:\\Users\\Murillo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Projeto_Produtos\\Projeto_Produtos.csproj",
+      "projectUniqueName": "C:\\Users\\Murillo\\Desktop\\Senai\\Exercicios\\Backend\\Projeto_Produtos_Dupla\\Projeto_Produtos.csproj",
       "projectName": "Projeto_Produtos",
-      "projectPath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Projeto_Produtos\\Projeto_Produtos.csproj",
-      "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Projeto_Produtos\\obj\\",
+      "projectPath": "C:\\Users\\Murillo\\Desktop\\Senai\\Exercicios\\Backend\\Projeto_Produtos_Dupla\\Projeto_Produtos.csproj",
+      "packagesPath": "C:\\Users\\Murillo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Murillo\\Desktop\\Senai\\Exercicios\\Backend\\Projeto_Produtos_Dupla\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Murillo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
