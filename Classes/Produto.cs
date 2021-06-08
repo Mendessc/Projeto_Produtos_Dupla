@@ -6,11 +6,11 @@ namespace Projeto_Produtos.Classes
 {
     public class Produto : IProduto
     {
-        public int CodigoProduto { get; set; }
-        public string NomeProduto { get; set; }
-        public DateTime DataCadastroP { get; set; }
-        public float Preco { get; set; }
-        public Marca marca { get; set; }
+        private int CodigoProduto { get; set; }
+        private string NomeProduto { get; set; }
+        private DateTime DataCadastroP { get; set; }
+        private float Preco { get; set; }
+        private Marca marca { get; set; }
          List<Produto> ListaProdutos = new List<Produto>();
 
          public string Cadastrar(Produto produto)
