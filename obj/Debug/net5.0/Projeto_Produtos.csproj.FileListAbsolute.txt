@@ -1,0 +1,16 @@
+C:\Users\Murillo\Desktop\Senai\Exercicios\Backend\Projeto_Produtos_Dupla\bin\Debug\net5.0\Projeto_Produtos.exe
+C:\Users\Murillo\Desktop\Senai\Exercicios\Backend\Projeto_Produtos_Dupla\bin\Debug\net5.0\Projeto_Produtos.deps.json
+C:\Users\Murillo\Desktop\Senai\Exercicios\Backend\Projeto_Produtos_Dupla\bin\Debug\net5.0\Projeto_Produtos.runtimeconfig.json
+C:\Users\Murillo\Desktop\Senai\Exercicios\Backend\Projeto_Produtos_Dupla\bin\Debug\net5.0\Projeto_Produtos.runtimeconfig.dev.json
+C:\Users\Murillo\Desktop\Senai\Exercicios\Backend\Projeto_Produtos_Dupla\bin\Debug\net5.0\Projeto_Produtos.dll
+C:\Users\Murillo\Desktop\Senai\Exercicios\Backend\Projeto_Produtos_Dupla\bin\Debug\net5.0\ref\Projeto_Produtos.dll
+C:\Users\Murillo\Desktop\Senai\Exercicios\Backend\Projeto_Produtos_Dupla\bin\Debug\net5.0\Projeto_Produtos.pdb
+C:\Users\Murillo\Desktop\Senai\Exercicios\Backend\Projeto_Produtos_Dupla\obj\Debug\net5.0\Projeto_Produtos.csprojAssemblyReference.cache
+C:\Users\Murillo\Desktop\Senai\Exercicios\Backend\Projeto_Produtos_Dupla\obj\Debug\net5.0\Projeto_Produtos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Murillo\Desktop\Senai\Exercicios\Backend\Projeto_Produtos_Dupla\obj\Debug\net5.0\Projeto_Produtos.AssemblyInfoInputs.cache
+C:\Users\Murillo\Desktop\Senai\Exercicios\Backend\Projeto_Produtos_Dupla\obj\Debug\net5.0\Projeto_Produtos.AssemblyInfo.cs
+C:\Users\Murillo\Desktop\Senai\Exercicios\Backend\Projeto_Produtos_Dupla\obj\Debug\net5.0\Projeto_Produtos.csproj.CoreCompileInputs.cache
+C:\Users\Murillo\Desktop\Senai\Exercicios\Backend\Projeto_Produtos_Dupla\obj\Debug\net5.0\Projeto_Produtos.dll
+C:\Users\Murillo\Desktop\Senai\Exercicios\Backend\Projeto_Produtos_Dupla\obj\Debug\net5.0\ref\Projeto_Produtos.dll
+C:\Users\Murillo\Desktop\Senai\Exercicios\Backend\Projeto_Produtos_Dupla\obj\Debug\net5.0\Projeto_Produtos.pdb
+C:\Users\Murillo\Desktop\Senai\Exercicios\Backend\Projeto_Produtos_Dupla\obj\Debug\net5.0\Projeto_Produtos.genruntimeconfig.cache

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using Projeto_Produtos_Dupla.Interfaces;
 
 namespace Projeto_Produtos_Dupla.Classes
@@ -18,5 +19,12 @@ namespace Projeto_Produtos_Dupla.Classes
         {
             throw new System.NotImplementedException();
         }
+=======
+namespace Projeto_Produtos_Dupla.Classes
+{
+    public class Login
+    {
+        
+>>>>>>> 68ef285e8bdb3682b928c6a124a3f09170a3be1d
     }
 }
