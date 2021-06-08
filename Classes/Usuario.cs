@@ -10,29 +10,28 @@ namespace Projeto_Produtos_Dupla.Classes
 
 
         private string Nome { get; set; }
-        private string Email { get; set; }
-        private string Senha { get; set; }
+        public string EmailU { get; set; }
+        public string SenhaU { get; set; }
 
 
 
         List<Usuario> ListaUsuario = new List<Usuario>();
 
-        public Usuario()
+        public void DataUsuario()
         {
             
         }
 
-        public Usuario(int _Codigo, string _Nome, string _Email, string _Senha)
+        public void DataUsuario(int _Codigo, string _Nome, string _Email, string _Senha)
         {
             Codigo = _Codigo;
             Nome = _Nome;
-            Email = _Email;
-            Senha = _Senha;
+            EmailU = _Email;
+            SenhaU = _Senha;
         }
 
         public string Cadastrar(Usuario usuarios)
         {
-    
             ListaUsuario.Add(usuarios);
             return $"Usuario cadastrado com sucesso!{usuarios.ListaUsuario}";
         }

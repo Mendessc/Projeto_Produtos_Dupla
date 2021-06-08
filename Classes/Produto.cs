@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Projeto_Produtos.Interfaces;
+using Projeto_Produtos_Dupla.Classes;
 
 namespace Projeto_Produtos.Classes
 {
@@ -11,6 +12,7 @@ namespace Projeto_Produtos.Classes
         private DateTime DataCadastroP { get; set; }
         private float Preco { get; set; }
         private Marca marca { get; set; }
+        private Usuario usuarios { get; set; }
          List<Produto> ListaProdutos = new List<Produto>();
 
          public string Cadastrar(Produto produto)
