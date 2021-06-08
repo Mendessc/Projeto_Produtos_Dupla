@@ -17,12 +17,12 @@ namespace Projeto_Produtos_Dupla.Classes
 
         List<Usuario> ListaUsuario = new List<Usuario>();
 
-        public Usuario()
+        public void DataUsuario()
         {
             
         }
 
-        public Usuario(int _Codigo, string _Nome, string _Email, string _Senha)
+        public void DataUsuario(int _Codigo, string _Nome, string _Email, string _Senha)
         {
             Codigo = _Codigo;
             Nome = _Nome;

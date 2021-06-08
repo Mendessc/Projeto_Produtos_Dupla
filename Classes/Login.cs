@@ -9,6 +9,7 @@ namespace Projeto_Produtos_Dupla.Classes
         string Email;
         string Senha;
         bool LoginIncorreto = false;
+        bool CadastroConcluido = false;
 
         Usuario usuario = new Usuario();
         List<Usuario> ListaUsuario = new List<Usuario>();
@@ -71,7 +72,9 @@ Bem vindo! O que deseja fazer?
                     string NomeCadastro = Console.ReadLine();
                     Console.WriteLine("Digite seu código: ");
                     int CodigoCadastro = int.Parse(Console.ReadLine());
-
+                    usuario.DataUsuario(CodigoCadastro, NomeCadastro, EmailCadastro, SenhaCadastro);
+                    usuario.Cadastrar(usuario);
+                    CadastroConcluido = true;
                     
                     break;
                 case "3":
@@ -80,7 +83,7 @@ Bem vindo! O que deseja fazer?
                     break;
             }
 
-            } while (LoginIncorreto == true);
+            } while (LoginIncorreto || CadastroConcluido);
         }
     }
 }
