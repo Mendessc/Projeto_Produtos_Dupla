@@ -12,13 +12,13 @@ namespace Projeto_Produtos_Dupla.Classes
         bool CadastroConcluido = false;
 
         Usuario usuario = new Usuario();
-        
+
         public string Deslogar()
         {
             throw new System.NotImplementedException();
         }
 
-        
+
         public string Logar()
         {
 
@@ -26,16 +26,9 @@ namespace Projeto_Produtos_Dupla.Classes
             Email = Console.ReadLine();
             Console.WriteLine("Digite sua senha: ");
             Senha = Console.ReadLine();
-            if (Email != EmailU && Senha != SenhaU)
-            {
-                Console.WriteLine("As credenciais não estão corretas");
-                
-            }
-            else
-            {
-                Console.WriteLine("Zika do pantano");      
-            }
-          
+
+
+
             return "Logado!";
         }
 
@@ -43,7 +36,6 @@ namespace Projeto_Produtos_Dupla.Classes
         {
             do
             {
-
                 Console.WriteLine($@"
 Bem vindo! O que deseja fazer?
 1 - Fazer Login
@@ -55,19 +47,31 @@ Bem vindo! O que deseja fazer?
                 {
                     case "1":
                         Logar();
+                        Console.WriteLine(usuario.EmailU);
+                        
+                        Console.WriteLine(usuario.SenhaU);
+                        if (Email != usuario.EmailU && Senha != usuario.SenhaU)
+                        {
+
+                            Console.WriteLine("Zika ");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Zika do pantano");
+                        }
                         break;
 
                     case "2":
                         Console.WriteLine("Digite seu email: ");
-                        string EmailCadastro = Console.ReadLine();
+                        string _Email = Console.ReadLine();
                         Console.WriteLine("Digite sua senha: ");
-                        string SenhaCadastro = Console.ReadLine();
+                        string _Senha = Console.ReadLine();
                         Console.WriteLine("Digite seu nome: ");
-                        string NomeCadastro = Console.ReadLine();
+                        string _Nome = Console.ReadLine();
                         Console.WriteLine("Digite seu código: ");
-                        int CodigoCadastro = int.Parse(Console.ReadLine());
-                        Usuario u = new Usuario(CodigoCadastro, NomeCadastro, EmailCadastro, SenhaCadastro);
-                        usuario.Cadastrar(u);
+                        int _Codigo = int.Parse(Console.ReadLine());
+                        Usuario u = new Usuario(_Codigo, _Nome, _Email, _Senha);
+                        Console.WriteLine(usuario.Cadastrar(u));
                         CadastroConcluido = true;
 
                         break;

@@ -24,22 +24,27 @@ namespace Projeto_Produtos_Dupla.Classes
 
         public Usuario(int _Codigo, string _Nome, string _Email, string _Senha)
         {
-            Codigo = _Codigo;
-            Nome = _Nome;
-            EmailU = _Email;
-            SenhaU = _Senha;
+            this.Codigo = _Codigo;
+            this.Nome = _Nome;
+            this.EmailU = _Email;
+            this.SenhaU = _Senha;
         }
 
         public string Cadastrar(Usuario usuario)
         {
             ListaUsuario.Add(usuario);
-            return $"Usuario cadastrado com sucesso!{usuario.ListaUsuario}";
+            return usuario.EmailU;
         }
 
         public string Deletar(Usuario usuario)
         {
             ListaUsuario.Remove(usuario);
             return "Usuario removido com sucesso!";
+        }
+
+        public string RetornoEmail()
+        {
+            return EmailU;
         }
     }
 }
