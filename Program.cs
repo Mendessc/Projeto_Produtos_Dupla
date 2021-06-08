@@ -1,4 +1,6 @@
 ﻿using System;
+using Projeto_Produtos.Classes;
+using Projeto_Produtos.Interfaces; 
 
 namespace Projeto_Produtos
 {
@@ -6,7 +8,11 @@ namespace Projeto_Produtos
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Marca marca1 = new Marca();
+
+            marca1.Cadastrar(marca1);
+
+            marca1.Listar();
         }
     }
 }

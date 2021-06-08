@@ -12,9 +12,14 @@ namespace Projeto_Produtos.Classes
 
         List<Marca> ListaMarcas = new List<Marca>();
 
-        public string Cadastrar(Marca marca)
+        public string Cadastrar(Marca novaMarca)
         {
-            ListaMarcas.Add(marca);
+            Console.WriteLine("Digite o código do produto");
+            novaMarca.Codigo = int.Parse(Console.ReadLine());
+             Console.WriteLine("Digite o nome do produto");
+            novaMarca.NomeMarca = Console.ReadLine();
+
+            ListaMarcas.Add(novaMarca);
             return "Marca cadastrada com sucesso!";
         }
 
@@ -23,9 +28,9 @@ namespace Projeto_Produtos.Classes
             return ListaMarcas;
         }
 
-        public string Deletar(Marca marca)
+        public string Deletar(Marca novaMarca)
         {
-            ListaMarcas.Remove(marca);
+            ListaMarcas.Remove(novaMarca);
             return "Marca removida com sucesso!";
         }
 

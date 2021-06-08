@@ -1,0 +1,16 @@
+C:\Users\lucas\OneDrive\Área de Trabalho\Projeto_Produtos\bin\Debug\net5.0\Projeto_Produtos.exe
+C:\Users\lucas\OneDrive\Área de Trabalho\Projeto_Produtos\bin\Debug\net5.0\Projeto_Produtos.deps.json
+C:\Users\lucas\OneDrive\Área de Trabalho\Projeto_Produtos\bin\Debug\net5.0\Projeto_Produtos.runtimeconfig.json
+C:\Users\lucas\OneDrive\Área de Trabalho\Projeto_Produtos\bin\Debug\net5.0\Projeto_Produtos.runtimeconfig.dev.json
+C:\Users\lucas\OneDrive\Área de Trabalho\Projeto_Produtos\bin\Debug\net5.0\Projeto_Produtos.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\Projeto_Produtos\bin\Debug\net5.0\ref\Projeto_Produtos.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\Projeto_Produtos\bin\Debug\net5.0\Projeto_Produtos.pdb
+C:\Users\lucas\OneDrive\Área de Trabalho\Projeto_Produtos\obj\Debug\net5.0\Projeto_Produtos.csprojAssemblyReference.cache
+C:\Users\lucas\OneDrive\Área de Trabalho\Projeto_Produtos\obj\Debug\net5.0\Projeto_Produtos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\OneDrive\Área de Trabalho\Projeto_Produtos\obj\Debug\net5.0\Projeto_Produtos.AssemblyInfoInputs.cache
+C:\Users\lucas\OneDrive\Área de Trabalho\Projeto_Produtos\obj\Debug\net5.0\Projeto_Produtos.AssemblyInfo.cs
+C:\Users\lucas\OneDrive\Área de Trabalho\Projeto_Produtos\obj\Debug\net5.0\Projeto_Produtos.csproj.CoreCompileInputs.cache
+C:\Users\lucas\OneDrive\Área de Trabalho\Projeto_Produtos\obj\Debug\net5.0\Projeto_Produtos.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\Projeto_Produtos\obj\Debug\net5.0\ref\Projeto_Produtos.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\Projeto_Produtos\obj\Debug\net5.0\Projeto_Produtos.pdb
+C:\Users\lucas\OneDrive\Área de Trabalho\Projeto_Produtos\obj\Debug\net5.0\Projeto_Produtos.genruntimeconfig.cache
