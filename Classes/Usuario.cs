@@ -17,12 +17,12 @@ namespace Projeto_Produtos_Dupla.Classes
 
         List<Usuario> ListaUsuario = new List<Usuario>();
 
-        public void DataUsuario()
+        public Usuario()
         {
             
         }
 
-        public void DataUsuario(int _Codigo, string _Nome, string _Email, string _Senha)
+        public Usuario(int _Codigo, string _Nome, string _Email, string _Senha)
         {
             Codigo = _Codigo;
             Nome = _Nome;
@@ -30,10 +30,10 @@ namespace Projeto_Produtos_Dupla.Classes
             SenhaU = _Senha;
         }
 
-        public string Cadastrar(Usuario usuarios)
+        public string Cadastrar(Usuario usuario)
         {
-            ListaUsuario.Add(usuarios);
-            return $"Usuario cadastrado com sucesso!{usuarios.ListaUsuario}";
+            ListaUsuario.Add(usuario);
+            return $"Usuario cadastrado com sucesso!{usuario.ListaUsuario}";
         }
 
         public string Deletar(Usuario usuario)

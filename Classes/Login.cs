@@ -12,36 +12,30 @@ namespace Projeto_Produtos_Dupla.Classes
         bool CadastroConcluido = false;
 
         Usuario usuario = new Usuario();
-        List<Usuario> ListaUsuario = new List<Usuario>();
+        
         public string Deslogar()
         {
             throw new System.NotImplementedException();
         }
 
+        
         public string Logar()
         {
-            
-                Console.WriteLine("Digite seu email: ");
-                Email = Console.ReadLine();
-                Console.WriteLine("Digite sua senha: ");
-                Senha = Console.ReadLine();
-                if (this.Email != EmailU)
-                {
-                    Console.WriteLine("O email digitado não está correto");
-                    LoginIncorreto = true;
 
-                }
-                else if (this.Senha != SenhaU)
-                {
-                    Console.WriteLine("A senha digitada é incorreta!");
-                    LoginIncorreto = true;
-                }
-                else
-                {
-                    LoginIncorreto = false;
-                }
-            
-
+            Console.WriteLine("Digite seu email: ");
+            Email = Console.ReadLine();
+            Console.WriteLine("Digite sua senha: ");
+            Senha = Console.ReadLine();
+            if (Email != EmailU && Senha != SenhaU)
+            {
+                Console.WriteLine("As credenciais não estão corretas");
+                
+            }
+            else
+            {
+                Console.WriteLine("Zika do pantano");      
+            }
+          
             return "Logado!";
         }
 
@@ -49,41 +43,44 @@ namespace Projeto_Produtos_Dupla.Classes
         {
             do
             {
-                
-            Console.WriteLine($@"
+
+                Console.WriteLine($@"
 Bem vindo! O que deseja fazer?
 1 - Fazer Login
 2 - Cadastrar Usuario
 3 - Sair");
-            string opcao = Console.ReadLine();
+                string opcao = Console.ReadLine();
 
-            switch (opcao)
-            {
-                case "1":
-                    Logar();
-                    break;
+                switch (opcao)
+                {
+                    case "1":
+                        Logar();
+                        break;
 
-                case "2":
-                    Console.WriteLine("Digite seu email: ");
-                    string EmailCadastro = Console.ReadLine();
-                    Console.WriteLine("Digite sua senha: ");
-                    string SenhaCadastro = Console.ReadLine();
-                    Console.WriteLine("Digite seu nome: ");
-                    string NomeCadastro = Console.ReadLine();
-                    Console.WriteLine("Digite seu código: ");
-                    int CodigoCadastro = int.Parse(Console.ReadLine());
-                    usuario.DataUsuario(CodigoCadastro, NomeCadastro, EmailCadastro, SenhaCadastro);
-                    usuario.Cadastrar(usuario);
-                    CadastroConcluido = true;
-                    
-                    break;
-                case "3":
-                    break;
-                default:
-                    break;
-            }
+                    case "2":
+                        Console.WriteLine("Digite seu email: ");
+                        string EmailCadastro = Console.ReadLine();
+                        Console.WriteLine("Digite sua senha: ");
+                        string SenhaCadastro = Console.ReadLine();
+                        Console.WriteLine("Digite seu nome: ");
+                        string NomeCadastro = Console.ReadLine();
+                        Console.WriteLine("Digite seu código: ");
+                        int CodigoCadastro = int.Parse(Console.ReadLine());
+                        Usuario u = new Usuario(CodigoCadastro, NomeCadastro, EmailCadastro, SenhaCadastro);
+                        usuario.Cadastrar(u);
+                        CadastroConcluido = true;
 
-            } while (LoginIncorreto || CadastroConcluido);
+                        break;
+                    case "3":
+                        Console.WriteLine("Obrigado por utilizar o sistema!");
+                        CadastroConcluido = false;
+                        break;
+                    default:
+                        Console.WriteLine("A opção digitada está errada, tente novamente!");
+                        break;
+                }
+
+            } while (LoginIncorreto == true || CadastroConcluido);
         }
     }
 }
