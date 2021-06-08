@@ -10,8 +10,8 @@ namespace Projeto_Produtos_Dupla.Classes
 
 
         private string Nome { get; set; }
-        private string Email { get; set; }
-        private string Senha { get; set; }
+        public string EmailU { get; set; }
+        public string SenhaU { get; set; }
 
 
 
@@ -26,13 +26,12 @@ namespace Projeto_Produtos_Dupla.Classes
         {
             Codigo = _Codigo;
             Nome = _Nome;
-            Email = _Email;
-            Senha = _Senha;
+            EmailU = _Email;
+            SenhaU = _Senha;
         }
 
         public string Cadastrar(Usuario usuarios)
         {
-    
             ListaUsuario.Add(usuarios);
             return $"Usuario cadastrado com sucesso!{usuarios.ListaUsuario}";
         }

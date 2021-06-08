@@ -9,7 +9,9 @@ namespace Projeto_Produtos
         static void Main(string[] args)
         {
             
-            
+            Login login = new Login();
+
+            login.FazerLogin();
 
             
             
