@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Projeto_Produtos_Dupla.Classes;
+using Projeto_Produtos.Classes;
+using Projeto_Produtos.Interfaces; 
+
 
 namespace Projeto_Produtos
 {
@@ -8,11 +10,8 @@ namespace Projeto_Produtos
     {
         static void Main(string[] args)
         {
-            
-            
 
-            
-            
+
 
         }
     }
