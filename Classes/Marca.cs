@@ -6,14 +6,30 @@ namespace Projeto_Produtos.Classes
 {
     public class Marca : IMarca
     {
-        public int Codigo { get; set; }
-        public string NomeMarca { get; set; }
-        public DateTime DataCadastro { get; set; }
+        private int Codigo { get; set; }
+        private string NomeMarca { get; set; }
+        private DateTime DataCadastro { get; set; }
 
         List<Marca> ListaMarcas = new List<Marca>();
 
+        public Marca()
+        {
+
+        }
+        public Marca(string _nomeMarca)
+        {
+            NomeMarca = _nomeMarca;
+            DataCadastro = DateTime.Now;
+
+        }
+
         public string Cadastrar(Marca marca)
         {
+            Console.WriteLine("Digite o código do produto");
+            marca.Codigo = int.Parse(Console.ReadLine());
+             Console.WriteLine("Digite o nome do produto");
+            marca.NomeMarca = Console.ReadLine();
+
             ListaMarcas.Add(marca);
             return "Marca cadastrada com sucesso!";
         }
@@ -25,7 +41,7 @@ namespace Projeto_Produtos.Classes
 
         public string Deletar(Marca marca)
         {
-            ListaMarcas.Remove(marca);
+            ListaMarcas.RemoveAll(x => x.NomeMarca == marca.NomeMarca);
             return "Marca removida com sucesso!";
         }
 

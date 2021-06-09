@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
+using Projeto_Produtos.Classes;
+using Projeto_Produtos.Interfaces;
 using Projeto_Produtos_Dupla.Classes;
 
 namespace Projeto_Produtos
