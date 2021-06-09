@@ -126,6 +126,8 @@ Data do cadastro:{marca.DataCadastro}");
                                         }
                                         break;
                                     case "3":
+                                        Console.WriteLine("Digite o codigo da marca que você deseja excluir: ");
+                                        int CodExcluir = int.Parse(Console.ReadLine());
                                         Console.WriteLine(marcas.Deletar(marcas));
                                         break;
                                     case "4":
