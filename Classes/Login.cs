@@ -15,7 +15,6 @@ namespace Projeto_Produtos_Dupla.Classes
 
         Usuario usuario = new Usuario();
         Marca marca = new Marca();
-
         Produto produto = new Produto();
 
         public string Deslogar()
@@ -87,12 +86,11 @@ Bem vindo! O que deseja fazer?
                                     LoginIncorreto = false;
                                 }
                             } while (LoginIncorreto);
-                            Marca m = new Marca();
-                            Produto p = new Produto();
+
                             do
                             {
-                                
-                            Console.WriteLine($@"
+
+                                Console.WriteLine($@"
 Bem vindo ao sistema! O que deseja fazer?
 1 - Cadastrar marca
 2 - Listar Marcas
@@ -101,45 +99,54 @@ Bem vindo ao sistema! O que deseja fazer?
 5 - Listar Produto
 6 - Remover Produto
 0 - Deslogar e sair do sistema");
-                            string opcaoMenu2 = Console.ReadLine();
-                            switch (opcaoMenu2)
-                            {
-                                case "1":
-                                    Console.WriteLine("Qual o código da marca?");
-                                    int CodMarca = int.Parse(Console.ReadLine());
-                                    Console.WriteLine("Qual o nome da sua marca?");
-                                    string NomeMarca = Console.ReadLine();
-                                    Console.WriteLine(marca.Cadastrar(m));
-                                    break;
-                                case "2":
-                                    foreach (Marca marca in marca.Listar())
-                                    {
-                                    Console.WriteLine(marca.Listar());
-                                        
-                                    }
-                                    break;
-                                case "3":
-                                    Console.WriteLine(marca.Deletar(m));
-                                    break;
-                                case "4":
-                                    Console.WriteLine(produto.Cadastrar(p));
-                                    break;
-                                case "5":
-                                    Console.WriteLine(produto.Listar());
-                                    break;
-                                case "6":
-                                    Console.WriteLine(produto.Deletar(p));
-                                    break;
-                                case "0":
-                                    Console.WriteLine(Deslogar());
-                                    RepeticaoMenu2 = false;
-                                    CadastroConcluido = false;
-                                    break;
-                                default:
-                                    break;
-                            }
+                                string opcaoMenu2 = Console.ReadLine();
+                                switch (opcaoMenu2)
+                                {
+                                    case "1":
+                                        Console.WriteLine("Qual o código da marca?");
+                                        int CodMarca = int.Parse(Console.ReadLine());
+                                        Console.WriteLine("Qual o nome da sua marca?");
+                                        string NomeMarca = Console.ReadLine();
+                                        Marca m1 = new Marca(NomeMarca);
+                                        Console.WriteLine(marca.Cadastrar(m1));
+                                        break;
+                                    case "2":
+                                        foreach (Marca marca in marca.Listar())
+                                        {
+                                            Console.WriteLine(marca.Listar());
+                                        }
+                                        break;
+                                    case "3":
+                                        Console.WriteLine(marca.Deletar(marca));
+                                        break;
+                                    case "4":
+                                        Console.WriteLine("Qual o código do produto?");
+                                        int CodProduto = int.Parse(Console.ReadLine());
+                                        Console.WriteLine("Qual o nome do produto?");
+                                        string NomeProduto = Console.ReadLine();
+                                        Console.WriteLine("Qual o preço do produto?");
+                                        float PrecoProduto = float.Parse(Console.ReadLine());
+                                        Console.WriteLine("Qual a marca do produto?");
+                                        string MarcaProduto = Console.ReadLine();
+                                        Produto p1 = new Produto(CodProduto, NomeProduto, PrecoProduto, marca, usuario);
+                                        Console.WriteLine(produto.Cadastrar(p1));
+                                        break;
+                                    case "5":
+                                        Console.WriteLine(produto.Listar());
+                                        break;
+                                    case "6":
+                                        Console.WriteLine(produto.Deletar(produto));
+                                        break;
+                                    case "0":
+                                        Console.WriteLine(Deslogar());
+                                        RepeticaoMenu2 = false;
+                                        CadastroConcluido = false;
+                                        break;
+                                    default:
+                                        break;
+                                }
                             } while (RepeticaoMenu2);
-                            
+
                         }
                         break;
 

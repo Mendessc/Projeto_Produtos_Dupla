@@ -25,11 +25,6 @@ namespace Projeto_Produtos.Classes
 
         public string Cadastrar(Marca marca)
         {
-            Console.WriteLine("Digite o código do produto");
-            marca.Codigo = int.Parse(Console.ReadLine());
-             Console.WriteLine("Digite o nome do produto");
-            marca.NomeMarca = Console.ReadLine();
-
             ListaMarcas.Add(marca);
             return "Marca cadastrada com sucesso!";
         }
