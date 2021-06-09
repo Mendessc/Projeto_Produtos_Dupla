@@ -13,7 +13,7 @@ namespace Projeto_Produtos_Dupla.Classes
         bool CadastroConcluido = false;
         bool RepeticaoMenu2 = true;
         string NomeMarca1;
-        int c;
+
 
         Usuario usuario = new Usuario();
         Marca marcas = new Marca();
