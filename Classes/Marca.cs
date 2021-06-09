@@ -6,9 +6,9 @@ namespace Projeto_Produtos.Classes
 {
     public class Marca : IMarca
     {
-        private int Codigo { get; set; }
-        private string NomeMarca { get; set; }
-        private DateTime DataCadastro { get; set; }
+        public int Codigo { get; set; }
+        public string NomeMarca { get; set; }
+        public DateTime DataCadastro { get; set; }
 
         List<Marca> ListaMarcas = new List<Marca>();
 
@@ -16,12 +16,14 @@ namespace Projeto_Produtos.Classes
         {
 
         }
-        public Marca(string _nomeMarca)
+        public Marca(string _nomeMarca, int _Codigo)
         {
             NomeMarca = _nomeMarca;
+            Codigo = _Codigo;
             DataCadastro = DateTime.Now;
 
         }
+
 
         public string Cadastrar(Marca marca)
         {
@@ -39,6 +41,8 @@ namespace Projeto_Produtos.Classes
             ListaMarcas.RemoveAll(x => x.NomeMarca == marca.NomeMarca);
             return "Marca removida com sucesso!";
         }
+        
 
+       
     }
 }

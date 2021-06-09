@@ -12,9 +12,11 @@ namespace Projeto_Produtos_Dupla.Classes
         bool LoginIncorreto = false;
         bool CadastroConcluido = false;
         bool RepeticaoMenu2 = true;
+        string NomeMarca1;
+        int c;
 
         Usuario usuario = new Usuario();
-        Marca marca = new Marca();
+        Marca marcas = new Marca();
         Produto produto = new Produto();
 
         public string Deslogar()
@@ -106,18 +108,25 @@ Bem vindo ao sistema! O que deseja fazer?
                                         Console.WriteLine("Qual o código da marca?");
                                         int CodMarca = int.Parse(Console.ReadLine());
                                         Console.WriteLine("Qual o nome da sua marca?");
-                                        string NomeMarca = Console.ReadLine();
-                                        Marca m1 = new Marca(NomeMarca);
-                                        Console.WriteLine(marca.Cadastrar(m1));
+                                        NomeMarca1 = Console.ReadLine();
+
+                                        Marca m1 = new Marca(NomeMarca1, CodMarca);
+                                        Console.WriteLine(marcas.Cadastrar(m1));
                                         break;
                                     case "2":
-                                        foreach (Marca marca in marca.Listar())
+                                        foreach (Marca marca in marcas.Listar())
                                         {
-                                            Console.WriteLine(marca.Listar());
+                                            c++;
+                                            marca.Listar();
+                                            Console.WriteLine($@"
+Marca {c}:
+Nome:{marca.NomeMarca}
+Código:{marca.Codigo}
+Data do cadastro:{marca.DataCadastro}");
                                         }
                                         break;
                                     case "3":
-                                        Console.WriteLine(marca.Deletar(marca));
+                                        Console.WriteLine(marcas.Deletar(marcas));
                                         break;
                                     case "4":
                                         Console.WriteLine("Qual o código do produto?");
@@ -127,12 +136,25 @@ Bem vindo ao sistema! O que deseja fazer?
                                         Console.WriteLine("Qual o preço do produto?");
                                         float PrecoProduto = float.Parse(Console.ReadLine());
                                         Console.WriteLine("Qual a marca do produto?");
-                                        string MarcaProduto = Console.ReadLine();
-                                        Produto p1 = new Produto(CodProduto, NomeProduto, PrecoProduto, marca, usuario);
+                                        string CadastroMarca = Console.ReadLine();
+
+                                        Produto p1 = new Produto(CodProduto, NomeProduto, PrecoProduto, CadastroMarca, u.Nome);
                                         Console.WriteLine(produto.Cadastrar(p1));
                                         break;
                                     case "5":
-                                        Console.WriteLine(produto.Listar());
+                                        foreach (Produto produto in produto.Listar())
+                                        {
+                                            c++;
+                                            produto.Listar();
+                                            Console.WriteLine($@"
+Produto {c}:
+Nome:{produto.NomeProduto}
+Código:{produto.Codigo}
+Data do cadastro:{produto.DataCadastro}
+Preço: {produto.Preco}
+Marca: {produto.NomeMarca}
+Cadastrado por: {produto.NomeUsuario}");
+                                        }
                                         break;
                                     case "6":
                                         Console.WriteLine(produto.Deletar(produto));
