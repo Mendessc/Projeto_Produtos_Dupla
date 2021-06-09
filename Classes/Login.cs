@@ -38,30 +38,13 @@ namespace Projeto_Produtos_Dupla.Classes
             {
                 Console.WriteLine($@"
 Bem vindo! O que deseja fazer?
-1 - Fazer Login
-2 - Cadastrar Usuario
+1 - Cadastrar Usuario
 3 - Sair");
                 string opcao = Console.ReadLine();
 
                 switch (opcao)
                 {
                     case "1":
-                        Logar();
-                        Console.WriteLine(usuario.EmailU);
-                        
-                        Console.WriteLine(usuario.SenhaU);
-                        if (Email != usuario.EmailU && Senha != usuario.SenhaU)
-                        {
-
-                            Console.WriteLine("Zika ");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Zika do pantano");
-                        }
-                        break;
-
-                    case "2":
                         Console.WriteLine("Digite seu email: ");
                         string _Email = Console.ReadLine();
                         Console.WriteLine("Digite sua senha: ");
@@ -70,11 +53,49 @@ Bem vindo! O que deseja fazer?
                         string _Nome = Console.ReadLine();
                         Console.WriteLine("Digite seu código: ");
                         int _Codigo = int.Parse(Console.ReadLine());
+
                         Usuario u = new Usuario(_Codigo, _Nome, _Email, _Senha);
-                        Console.WriteLine(usuario.Cadastrar(u));
+
                         CadastroConcluido = true;
 
+                        if (CadastroConcluido)
+                        {
+                            Console.WriteLine("Faça o login!");
+                            do
+                            {
+
+                                Logar();
+
+                                if (Email != usuario.RetornoEmail(u))
+                                {
+                                    Console.WriteLine("As credenciais estão incorretas!");
+                                    LoginIncorreto = true;
+                                }
+                                else if (Senha != usuario.RetornoSenha(u))
+                                {
+                                    Console.WriteLine("As credenciais estão incorretas!");
+                                    LoginIncorreto = true;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Zika do pantano");
+                                    LoginIncorreto = false;
+                                }
+                            } while (LoginIncorreto);
+                            Console.WriteLine($@"
+Bem vindo ao sistema! O que deseja fazer?
+1 - Cadastrar marca
+2 - Listar Marcas
+3 - Removar marcas
+4 - Cadastrar Produto
+5 - Listar Produto
+6 - Remover Produto
+0 - Deslogar e sair do sistema");
+                            string opcaoMenu2 = Console.ReadLine();
+
+                        }
                         break;
+
                     case "3":
                         Console.WriteLine("Obrigado por utilizar o sistema!");
                         CadastroConcluido = false;
@@ -84,7 +105,7 @@ Bem vindo! O que deseja fazer?
                         break;
                 }
 
-            } while (LoginIncorreto == true || CadastroConcluido);
+            } while (CadastroConcluido);
         }
     }
 }

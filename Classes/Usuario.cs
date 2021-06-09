@@ -10,8 +10,8 @@ namespace Projeto_Produtos_Dupla.Classes
 
 
         private string Nome { get; set; }
-        public string EmailU { get; set; }
-        public string SenhaU { get; set; }
+        private string EmailU { get; set; }
+        private string SenhaU { get; set; }
 
 
 
@@ -33,7 +33,7 @@ namespace Projeto_Produtos_Dupla.Classes
         public string Cadastrar(Usuario usuario)
         {
             ListaUsuario.Add(usuario);
-            return usuario.EmailU;
+            return usuario.Nome;
         }
 
         public string Deletar(Usuario usuario)
@@ -42,9 +42,13 @@ namespace Projeto_Produtos_Dupla.Classes
             return "Usuario removido com sucesso!";
         }
 
-        public string RetornoEmail()
+        public string RetornoEmail(Usuario usuario)
         {
-            return EmailU;
+            return usuario.EmailU;
+        }
+        public string RetornoSenha(Usuario usuario)
+        {
+            return usuario.SenhaU;
         }
     }
 }
