@@ -10,8 +10,8 @@ namespace Projeto_Produtos_Dupla.Classes
 
 
         private string Nome { get; set; }
-        public string EmailU { get; set; }
-        public string SenhaU { get; set; }
+        private string EmailU { get; set; }
+        private string SenhaU { get; set; }
 
 
 
@@ -24,22 +24,31 @@ namespace Projeto_Produtos_Dupla.Classes
 
         public Usuario(int _Codigo, string _Nome, string _Email, string _Senha)
         {
-            Codigo = _Codigo;
-            Nome = _Nome;
-            EmailU = _Email;
-            SenhaU = _Senha;
+            this.Codigo = _Codigo;
+            this.Nome = _Nome;
+            this.EmailU = _Email;
+            this.SenhaU = _Senha;
         }
 
         public string Cadastrar(Usuario usuario)
         {
             ListaUsuario.Add(usuario);
-            return $"Usuario cadastrado com sucesso!{usuario.ListaUsuario}";
+            return usuario.Nome;
         }
 
         public string Deletar(Usuario usuario)
         {
             ListaUsuario.Remove(usuario);
             return "Usuario removido com sucesso!";
+        }
+
+        public string RetornoEmail(Usuario usuario)
+        {
+            return usuario.EmailU;
+        }
+        public string RetornoSenha(Usuario usuario)
+        {
+            return usuario.SenhaU;
         }
     }
 }
