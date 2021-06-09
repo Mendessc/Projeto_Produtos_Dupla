@@ -24,25 +24,20 @@ namespace Projeto_Produtos.Classes
 
         public string Cadastrar(Marca marca)
         {
-            Console.WriteLine("Digite o código do produto");
-            marca.Codigo = int.Parse(Console.ReadLine());
-             Console.WriteLine("Digite o nome do produto");
-            marca.NomeMarca = Console.ReadLine();
-
             ListaMarcas.Add(marca);
             return "Marca cadastrada com sucesso!";
+        }
+
+
+        public string Deletar(Marca marca)
+        {
+            ListaMarcas.Remove(marca);
+            return "Marca removida com sucesso!";
         }
 
         public List<Marca> Listar()
         {
             return ListaMarcas;
         }
-
-        public string Deletar(Marca marca)
-        {
-            ListaMarcas.RemoveAll(x => x.NomeMarca == marca.NomeMarca);
-            return "Marca removida com sucesso!";
-        }
-
     }
 }
