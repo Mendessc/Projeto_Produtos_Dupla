@@ -36,9 +36,9 @@ namespace Projeto_Produtos.Classes
             return ListaMarcas;
         }
 
-        public string Deletar(Marca marca)
+        public string Deletar(Marca marca, int index)
         {
-            ListaMarcas.RemoveAll(x => x.NomeMarca == marca.NomeMarca);
+            ListaMarcas.RemoveAt(index);
             return "Marca removida com sucesso!";
         }
         

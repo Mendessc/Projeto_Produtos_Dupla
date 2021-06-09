@@ -44,9 +44,9 @@ namespace Projeto_Produtos.Classes
             return ListaProdutos;
         }
 
-        public string Deletar(Produto produto)
+        public string Deletar(Produto produto, int index)
         {
-            ListaProdutos.RemoveAll(x => x.NomeProduto == produto.NomeProduto);
+            ListaProdutos.RemoveAt(index);
             return "Produto removido com sucesso!";
         }
 

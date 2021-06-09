@@ -116,19 +116,20 @@ Bem vindo ao sistema! O que deseja fazer?
                                     case "2":
                                         foreach (Marca marca in marcas.Listar())
                                         {
-                                            c++;
+                                            
                                             marca.Listar();
                                             Console.WriteLine($@"
-Marca {c}:
+
 Nome:{marca.NomeMarca}
 Código:{marca.Codigo}
 Data do cadastro:{marca.DataCadastro}");
                                         }
                                         break;
                                     case "3":
-                                        Console.WriteLine("Digite o codigo da marca que você deseja excluir: ");
-                                        int CodExcluir = int.Parse(Console.ReadLine());
-                                        Console.WriteLine(marcas.Deletar(marcas));
+                                        Console.WriteLine("Digite a posição da marca que você deseja excluir: ");
+                                        int verificar = int.Parse(Console.ReadLine());
+                                        verificar = verificar - 1;
+                                        Console.WriteLine(marcas.Deletar(marcas, verificar));
                                         break;
                                     case "4":
                                         Console.WriteLine("Qual o código do produto?");
@@ -146,10 +147,10 @@ Data do cadastro:{marca.DataCadastro}");
                                     case "5":
                                         foreach (Produto produto in produto.Listar())
                                         {
-                                            c++;
+                                           
                                             produto.Listar();
                                             Console.WriteLine($@"
-Produto {c}:
+
 Nome:{produto.NomeProduto}
 Código:{produto.Codigo}
 Data do cadastro:{produto.DataCadastro}
@@ -159,7 +160,10 @@ Cadastrado por: {produto.NomeUsuario}");
                                         }
                                         break;
                                     case "6":
-                                        Console.WriteLine(produto.Deletar(produto));
+                                        Console.WriteLine("Digite a posição da marca que você deseja excluir: ");
+                                        int verificarP = int.Parse(Console.ReadLine());
+                                        verificarP = verificarP - 1;
+                                        Console.WriteLine(produto.Deletar(produto, verificarP));
                                         break;
                                     case "0":
                                         Console.WriteLine(Deslogar());
