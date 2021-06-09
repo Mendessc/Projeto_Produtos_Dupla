@@ -11,13 +11,16 @@ namespace Projeto_Produtos_Dupla.Classes
         string Senha;
         bool LoginIncorreto = false;
         bool CadastroConcluido = false;
+        bool RepeticaoMenu2 = true;
 
         Usuario usuario = new Usuario();
         Marca marca = new Marca();
 
+        Produto produto = new Produto();
+
         public string Deslogar()
         {
-            throw new System.NotImplementedException();
+            return "Muito obrigado por utilizar o sistema! Você foi deslogado!";
         }
 
 
@@ -84,6 +87,11 @@ Bem vindo! O que deseja fazer?
                                     LoginIncorreto = false;
                                 }
                             } while (LoginIncorreto);
+                            Marca m = new Marca();
+                            Produto p = new Produto();
+                            do
+                            {
+                                
                             Console.WriteLine($@"
 Bem vindo ao sistema! O que deseja fazer?
 1 - Cadastrar marca
@@ -94,30 +102,35 @@ Bem vindo ao sistema! O que deseja fazer?
 6 - Remover Produto
 0 - Deslogar e sair do sistema");
                             string opcaoMenu2 = Console.ReadLine();
-                            Marca m = new Marca();
                             switch (opcaoMenu2)
                             {
                                 case "1":
-                                    marca.Cadastrar(m);
+                                    Console.WriteLine(marca.Cadastrar(m));
                                     break;
                                 case "2":
-                                    marca.Listar();
+                                    Console.WriteLine(marca.Listar());
                                     break;
                                 case "3":
-                                    marca.Deletar(m);
+                                    Console.WriteLine(marca.Deletar(m));
                                     break;
                                 case "4":
-                                    
+                                    Console.WriteLine(produto.Cadastrar(p));
                                     break;
                                 case "5":
+                                    Console.WriteLine(produto.Listar());
                                     break;
                                 case "6":
+                                    Console.WriteLine(produto.Deletar(p));
                                     break;
                                 case "0":
+                                    Console.WriteLine(Deslogar());
+                                    RepeticaoMenu2 = false;
+                                    CadastroConcluido = false;
                                     break;
                                 default:
                                     break;
                             }
+                            } while (RepeticaoMenu2);
                             
                         }
                         break;
