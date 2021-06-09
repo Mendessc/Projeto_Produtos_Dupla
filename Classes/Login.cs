@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Projeto_Produtos.Classes;
 using Projeto_Produtos_Dupla.Interfaces;
 
 namespace Projeto_Produtos_Dupla.Classes
@@ -12,6 +13,7 @@ namespace Projeto_Produtos_Dupla.Classes
         bool CadastroConcluido = false;
 
         Usuario usuario = new Usuario();
+        Marca marca = new Marca();
 
         public string Deslogar()
         {
@@ -92,7 +94,31 @@ Bem vindo ao sistema! O que deseja fazer?
 6 - Remover Produto
 0 - Deslogar e sair do sistema");
                             string opcaoMenu2 = Console.ReadLine();
-
+                            Marca m = new Marca();
+                            switch (opcaoMenu2)
+                            {
+                                case "1":
+                                    marca.Cadastrar(m);
+                                    break;
+                                case "2":
+                                    marca.Listar();
+                                    break;
+                                case "3":
+                                    marca.Deletar(m);
+                                    break;
+                                case "4":
+                                    
+                                    break;
+                                case "5":
+                                    break;
+                                case "6":
+                                    break;
+                                case "0":
+                                    break;
+                                default:
+                                    break;
+                            }
+                            
                         }
                         break;
 
