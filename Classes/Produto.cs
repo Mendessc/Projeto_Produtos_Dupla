@@ -7,26 +7,30 @@ namespace Projeto_Produtos.Classes
 {
     public class Produto : IProduto
     {
-        private int Codigo { get; set; }
-        private string NomeProduto { get; set; }
-        private DateTime DataCadastro { get; set; }
-        private float Preco { get; set; }
-        private Marca marca { get; set; }
-        private Usuario usuarios { get; set; }
-        private List<Produto> ListaDeProdutos { get; set; }
+        public int Codigo { get; set; }
+        public string NomeProduto { get; set; }
+        public string NomeMarca { get; set; }
+        public string NomeUsuario { get; set; }
+        
+                
+        public DateTime DataCadastro { get; set; }
+        public float Preco { get; set; }
+        public Marca marca { get; set; }
+        public Usuario usuarios { get; set; }
+        public List<Produto> ListaDeProdutos { get; set; }
         List<Produto> ListaProdutos = new List<Produto>();
         public Produto()
         {
 
         }
-        public Produto(int _codigo, string _nomeProduto, float _preco, Marca _marca, Usuario _usuarios)
+        public Produto(int _codigo, string _nomeProduto, float _preco, string _NomeMarca, string _NomeUsuario)
         {
             this.Codigo = _codigo;
             this.NomeProduto = _nomeProduto;
             this.Preco = _preco;
             this.DataCadastro = DateTime.Now;
-            this.marca = _marca;
-            this.usuarios = _usuarios;
+            this.NomeMarca = _NomeMarca;
+            this.NomeUsuario = _NomeUsuario;
             this.ListaDeProdutos = ListaProdutos;
         }
         public string Cadastrar(Produto produto)
@@ -40,11 +44,13 @@ namespace Projeto_Produtos.Classes
             return ListaProdutos;
         }
 
-        public string Deletar(Produto produto)
+        public string Deletar(Produto produto, int index)
         {
-            ListaProdutos.RemoveAll(x => x.NomeProduto == produto.NomeProduto);
+            ListaProdutos.RemoveAt(index);
             return "Produto removido com sucesso!";
         }
+
+        
     }
 }
 

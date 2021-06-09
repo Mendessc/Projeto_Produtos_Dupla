@@ -8,6 +8,6 @@ namespace Projeto_Produtos.Interfaces
     {
          string Cadastrar(Produto produto);
         List<Produto> Listar();
-        string Deletar(Produto produto);
+        string Deletar(Produto produto, int index);
     }
 }

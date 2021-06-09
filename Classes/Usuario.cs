@@ -9,7 +9,7 @@ namespace Projeto_Produtos_Dupla.Classes
         private int Codigo { get; set; }
 
 
-        private string Nome { get; set; }
+        public string Nome { get; set; }
         private string EmailU { get; set; }
         private string SenhaU { get; set; }
 
