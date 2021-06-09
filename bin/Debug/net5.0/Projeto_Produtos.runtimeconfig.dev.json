@@ -3,6 +3,7 @@
     "additionalProbingPaths": [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "C:\\Users\\Murillo\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\Murillo\\.nuget\\packages"
 =======
@@ -13,6 +14,10 @@
       "C:\\Users\\Murillo\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\Murillo\\.nuget\\packages"
 >>>>>>> login
+=======
+      "C:\\Users\\lucas\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\lucas\\.nuget\\packages"
+>>>>>>> 4dc87abb8f260a74fd2a9b93cc60c7a8d975155f
     ]
   }
 }

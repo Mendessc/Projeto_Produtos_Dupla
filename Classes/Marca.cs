@@ -30,18 +30,25 @@ namespace Projeto_Produtos.Classes
             return "Marca cadastrada com sucesso!";
         }
 
-        public List<Marca> Listar()
-        {
-            return ListaMarcas;
-        }
 
         public string Deletar(Marca marca, int index)
         {
+<<<<<<< HEAD
             ListaMarcas.RemoveAt(index);
+=======
+            ListaMarcas.Remove(marca);
+>>>>>>> 4dc87abb8f260a74fd2a9b93cc60c7a8d975155f
             return "Marca removida com sucesso!";
         }
         
 
+<<<<<<< HEAD
        
+=======
+        public List<Marca> Listar()
+        {
+            return ListaMarcas;
+        }
+>>>>>>> 4dc87abb8f260a74fd2a9b93cc60c7a8d975155f
     }
 }
