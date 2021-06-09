@@ -105,10 +105,18 @@ Bem vindo ao sistema! O que deseja fazer?
                             switch (opcaoMenu2)
                             {
                                 case "1":
+                                    Console.WriteLine("Qual o código da marca?");
+                                    int CodMarca = int.Parse(Console.ReadLine());
+                                    Console.WriteLine("Qual o nome da sua marca?");
+                                    string NomeMarca = Console.ReadLine();
                                     Console.WriteLine(marca.Cadastrar(m));
                                     break;
                                 case "2":
+                                    foreach (Marca marca in marca.Listar())
+                                    {
                                     Console.WriteLine(marca.Listar());
+                                        
+                                    }
                                     break;
                                 case "3":
                                     Console.WriteLine(marca.Deletar(m));
