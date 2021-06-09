@@ -38,7 +38,7 @@ namespace Projeto_Produtos_Dupla.Classes
             return "Logado!";
         }
 
-        public void FazerLogin()
+        public Login()
         {
             do
             {
