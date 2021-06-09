@@ -12,11 +12,6 @@ namespace Projeto_Produtos
             
             Login login = new Login();
 
-            login.FazerLogin();
-
-            
-            
-
         }
     }
 }
